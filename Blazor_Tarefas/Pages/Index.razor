@@ -29,7 +29,7 @@ else
                     <td><button @onclick="@(() => RemoveTarefa(item.Id))" class="btn btn-outline-danger"><i class="oi oi-trash"></i></button></td>
                     <td>@item.DataCriacao</td>
                     <td>@item.Descricao</td>
-                    <td><input type="checkbox" @bind="item.Concluida"> @((item.Concluida == true) ? "Concluída" : "Pendente")</td>
+                    <td><input id="@item.Id" type="checkbox" @bind="item.Concluida"> <label for="@item.Id">@((item.Concluida == true) ? "Concluída" : "Pendente")</label></td>
                 </tr>
             }
         </tbody>
